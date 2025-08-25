@@ -4,10 +4,10 @@ to the programming language.
 */
 
 #include <iostream>
-#include <cxxopts.hpp>
 #include <fstream>
 #include <string>
 #include "repl.h"
+#include "cxxopts.hpp"
 
 int main(int argc, char *argv[]){
   std::ifstream versionFile("../VERSION");
