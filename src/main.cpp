@@ -41,7 +41,14 @@ int main(int argc, char *argv[]){
     return 0;
   }
 
-  cxxopts::Options options("Reasons", "A philosophical programming language");
+  cxxopts::ParseResult argument;
+  try {
+      argument = options.parse(argc, argv);  // <-- parse the command-line arguments
+  } catch (const cxxopts::OptionException& e) {
+      std::cerr << "Error parsing options: " << e.what() << std::endl;
+      return 1;
+  }
+
   options.add_options()
     ("h,help", "Print usage")
     ("r,repl", "Run the REPL")
