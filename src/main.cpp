@@ -21,7 +21,7 @@ int main(int argc, char *argv[]){
   versionFile.close();
 
   // Default output
-  std::cout << ""\x1B[34mReasons,\033[0m\n"";
+  std::cout << "\x1B[34mReasons,\033[0m\n";
   std::cout << version;
   std::cout << "\x1B[92m by Aitzaz Imtiaz\033[0m\n";
   std::cout << "\n";
@@ -47,10 +47,10 @@ int main(int argc, char *argv[]){
     return 0;
   }
   if (argument.count("version")){
-    cout << version;
+    std::cout << version;
     return 0;
   }
-  if (result.count("repl")) {
+  if (argument.count("repl")) {
     std::cout << "Starting REPL...\n";
     repl();
   }
