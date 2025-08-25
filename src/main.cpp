@@ -48,12 +48,6 @@ int main(int argc, char *argv[]){
     ("v,version", "Show version info");
 
   cxxopts::ParseResult argument;
-  try {
-    argument = options.parse(argc, argv);
-  } catch (const cxxopts::OptionException& e) {
-    std::cerr << "Error parsing options: " << e.what() << std::endl;
-    return 1;
-  }
 
   if (argument.count("help")) {
     std::cout << options.help() << std::endl;
