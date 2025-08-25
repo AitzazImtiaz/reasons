@@ -6,9 +6,9 @@ project(Reasons VERSION 0.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-target_include_directories(reasons PRIVATE ${CMAKE_SOURCE_DIR}/include)
-
 add_executable(reasons
     src/main.cpp
     src/repl.cpp
 )
+
+target_include_directories(reasons PRIVATE ${CMAKE_SOURCE_DIR}/include)
