@@ -51,7 +51,7 @@ int main(int argc, char *argv[]){
   auto argument = options.parse(argc, argv);
   if (argument.count("help")) {
     std::cout << options.help() << std::endl;
-    return 0;
+    exit(0);
   }
   if (argument.count("version")){
     std::cout << version << "\n";
